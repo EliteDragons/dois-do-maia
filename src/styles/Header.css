@@ -1,5 +1,7 @@
 html{
     background-color: steelblue;
+    margin-bottom: 80px;
+    
 }
 
 .menu {
@@ -58,3 +60,5 @@ html{
 img{
     padding: 10px;
 }
+
+

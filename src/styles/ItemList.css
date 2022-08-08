@@ -1,0 +1,29 @@
+.Title {
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+#MainDiv{
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.Container {
+    display: flex;
+}
+
+#Image{
+    border-radius: 5px;
+    padding: 0;
+    margin-left: 20px;    
+}
+
+.Description {
+    flex-wrap: wrap;
+    margin: 20px;
+    margin-left: 20px;
+    font-size: 17px;
+}
