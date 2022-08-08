@@ -7,7 +7,7 @@
     "dev": "vite --port 5001 --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite index.html"
   },
   "dependencies": {
     "react": "^18.2.0",
