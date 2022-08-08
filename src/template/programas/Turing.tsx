@@ -5,30 +5,34 @@ import {useRef, useState} from "react"
 
 export function Turing_template(){
     const [mode, setMode] = useState(0)
-    const ref = useRef(null)
-    const ref_key = useRef(null)
+    const ref = useRef<any>(null)
+    const ref_key = useRef<any>(null)
 
     const SendRequest = async () =>{
-        await fetch("http://89.153.17.162:5000/", {
-            body: JSON.stringify({
-                mode:mode,
-                text: ref.current.value,
-                key: ref_key.current.value
-            }),
-            method:"POST",
-            mode: "cors",
-            headers:{
-                "Content-Type": "application/json"
-            }
-        }).then(data =>{ return data.json()})
-        .then(res=> {
-            ref.current.value = res["text"]
-        })
-        .catch(error => console.log(error))
+        if (ref.current != null && ref_key.current != null){
+            await fetch("http://89.153.17.162:5000/", {
+                body: JSON.stringify({
+                    mode:mode,
+                    text: ref.current.value,
+                    key: ref_key.current.value
+                }),
+                method:"POST",
+                mode: "cors",
+                headers:{
+                    "Content-Type": "application/json"
+                }
+            }).then(data =>{ return data.json()})
+            .then(res=> {
+                if(ref.current != null){
+                    ref.current.value = res["text"]
+                }
+            })
+            .catch(error => console.log(error))
+        }
     }
         
     
-    const handleClick = event=>{
+    const handleClick = (event: any)=>{
         SendRequest()
     }
 
@@ -37,7 +41,7 @@ export function Turing_template(){
             <Header/>
             <div className="MainDiv">
                 <div className="form">
-                    <textarea ref = {ref} id="text_input" rows="15" placeholder="Escreva o texto aqui..."></textarea>
+                    <textarea ref = {ref} id="text_input" rows={15} placeholder="Escreva o texto aqui..."></textarea>
                     <span>
                         <p><input type="radio" value="Codificar" name="mode" onClick={()=>setMode(1)}/>Codificar</p>
                         <p><input type="radio" value="Descodificar" name ="mode" onClick={()=>setMode(-1)}/>Descodificar</p>
