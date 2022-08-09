@@ -10,7 +10,7 @@ export function Turing_template(){
 
     const SendRequest = async () =>{
         if (ref.current != null && ref_key.current != null){
-            await fetch("http://89.153.17.162:5000/", {
+            await fetch("https://api-dos-gays.herokuapp.com/", {
                 body: JSON.stringify({
                     mode:mode,
                     text: ref.current.value,
