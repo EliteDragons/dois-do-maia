@@ -38,7 +38,7 @@ export function Turing_template(){
 
     return (
         <>
-            <Header/>
+            
             <div className="MainDiv">
                 <div className="form">
                     <textarea ref = {ref} id="text_input" rows={15} placeholder="Escreva o texto aqui..."></textarea>
@@ -53,7 +53,7 @@ export function Turing_template(){
                 </div>
                 
             </div>
-            
+            <Header/>
         </>
 
     )

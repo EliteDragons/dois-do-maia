@@ -17,9 +17,12 @@ const Descriptions = {
 export function Programas(){
     return (
         <>
-            <header style={{height:"15px"}}><Header/></header>
+            
+            <div style={{height:"70px"}}/>
             <ListItem ItemName="Turing Program" Description={Descriptions["Turing"]} href="/programas/Turing"/>
+            <Header/>
             <footer><Footer/></footer>
+            
         </>
     )
 }
