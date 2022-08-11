@@ -7,9 +7,8 @@ const Descriptions = {
     `
     Turing foi o primeiro projeto pessoal em python que desenvolvi. Este programa
     tem como função codificar e descodificar mensagens com base numa chave, que pode
-    ser tanto numérica como texto. Este programa tem um significado especial para mim
-    por ser uma homenagem ao filme que incentivou-me a criar os meus próprios programas-
-    "O jogo da imitação".
+    ser tanto numérica como texto.\n
+    Inspiração -- "O jogo da imitação".
 
     `
 }
