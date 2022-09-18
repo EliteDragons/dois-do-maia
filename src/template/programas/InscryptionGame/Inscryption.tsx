@@ -7,9 +7,25 @@ import { useEffect, useRef, useState } from "react"
 
 export function InscryptionGame(){
     const myBoardRef = useRef<(HTMLElement|any)[]>([])
-    const [enemyBoard, setEnemyBoard] = useState<string[]>(["empty", "empty", "empty", "empty", "empty"])
-    const [myBoard, setMyBoard] = useState<string[]>(["empty", "empty", "empty", "empty", "empty"])
+    const enemyBoardRef = useRef<(HTMLElement|any)[]>([])
+    const [enemyBoard, setEnemyBoard] = useState<string[]>(["", "", "", "", ""])
+    const [myBoard, setMyBoard] = useState<string[]>(["", "", "", "", ""])
 
+    const ChangeMyCard= (id:number)=>{
+        setMyBoard(()=>{
+            myBoard[id] = "Clicou caralho!!"
+            return myBoard
+        })
+        myBoardRef.current[id].innerHTML="Clicou caralho!!"
+    }
+
+    const ChangeTheirCard = (id:number)=>{
+        setEnemyBoard(()=>{
+            enemyBoard[id] = "Clicou caralho!!"
+            return enemyBoard
+        })
+        enemyBoardRef.current[id].innerHTML = "Clicou caralho!!"
+    }
     
     return (
     <>
@@ -28,18 +44,18 @@ export function InscryptionGame(){
     }}>
         <div className="Board">
             <div className="User">
-                <Card key={0} content={myBoard[0]} refList={myBoardRef} />
-                <Card key={1} content={myBoard[1]} refList={myBoardRef}/>
-                <Card key={2} content={myBoard[2]} refList={myBoardRef}/>
-                <Card key={3} content={myBoard[3]} refList={myBoardRef}/>
-                <Card key={4} content={myBoard[4]} refList={myBoardRef}/>
+                <Card key={0} id={0} content={myBoard[0]} refList={myBoardRef} func={()=>ChangeMyCard(0)}/>
+                <Card key={1} id={1} content={myBoard[1]} refList={myBoardRef} func={()=>ChangeMyCard(1)}/>
+                <Card key={2} id={2} content={myBoard[2]} refList={myBoardRef} func={()=>ChangeMyCard(2)}/>
+                <Card key={3} id={3} content={myBoard[3]} refList={myBoardRef} func={()=>ChangeMyCard(3)}/>
+                <Card key={4} id={4} content={myBoard[4]} refList={myBoardRef} func={()=>ChangeMyCard(4)}/>
             </div>
             <div className="Openent">
-                <Card key={5} content={enemyBoard[0]} refList={myBoardRef}/>
-                <Card key={6} content={enemyBoard[1]} refList={myBoardRef}/>
-                <Card key={7} content={enemyBoard[2]} refList={myBoardRef}/>
-                <Card key={8} content={enemyBoard[3]} refList={myBoardRef}/>
-                <Card key={9} content={enemyBoard[4]} refList={myBoardRef}/>
+                <Card key={0} id={0} content={enemyBoard[0]} refList={enemyBoardRef} func={()=>ChangeTheirCard(0)}/>
+                <Card key={1} id={1} content={enemyBoard[1]} refList={enemyBoardRef} func={()=>ChangeTheirCard(1)}/>
+                <Card key={2} id={2} content={enemyBoard[2]} refList={enemyBoardRef} func={()=>ChangeTheirCard(2)}/>
+                <Card key={3} id={3} content={enemyBoard[3]} refList={enemyBoardRef} func={()=>ChangeTheirCard(3)}/>
+                <Card key={4} id={4} content={enemyBoard[4]} refList={enemyBoardRef} func={()=>ChangeTheirCard(4)} />
             </div>
         </div>
         <div className="IDK">
