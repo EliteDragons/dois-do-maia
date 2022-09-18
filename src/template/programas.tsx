@@ -10,6 +10,10 @@ const Descriptions = {
     ser tanto numérica como texto.
     Inspiração -- "O jogo da imitação".
 
+    `, 
+    Inscryption:
+    `
+    Inscryption, um jogo de cartas,
     `
 }
 
@@ -18,7 +22,8 @@ export function Programas(){
         <>
             
             <div style={{height:"70px"}}/>
-            <ListItem ItemName="Turing Program" Description={Descriptions["Turing"]} href="/programas/Turing"/>
+            <ListItem ItemName="Turing Program" Description={Descriptions["Turing"]} href="/programas/Turing" img_src="https://www.princeton.edu/sites/default/files/styles/half_2x/public/images/2012/05/turing_VideoIndex.jpg?itok=Y06X7sRg"/>
+            <ListItem ItemName="Inscryption" Description={Descriptions["Inscryption"]} href="/programas/Inscryption" img_src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.newgamesbox.net%2Fwp-content%2Fuploads%2F2020%2F09%2FInscryption-Free-Download.jpg&f=1&nofb=1"/>
             <Header/>
             <footer><Footer/></footer>
             

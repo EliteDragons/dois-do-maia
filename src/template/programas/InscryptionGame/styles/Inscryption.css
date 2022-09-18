@@ -1,0 +1,43 @@
+.Board {
+    display: flex;
+    flex-direction: column;
+    flex:0.8;
+}
+
+.User{
+    display: flex;
+    flex:0.5
+
+}
+.Openent{
+    display: flex;
+    flex:0.5
+
+}
+
+.User > div {
+    flex:0.2;
+    margin: 5px 0px 5px 5px;
+    
+}
+
+.Openent > div{
+    flex: 0.2;
+    margin: 5px 0px 5px 5px;
+}
+
+.MainScreen {
+    display: flex;
+}
+.IDK {
+    flex:0.2;
+}
+
+.card:hover {
+    border: ridge rgb(235, 89, 63) 3px;
+}
+
+.card {
+    background-color: gray;
+    border-radius: 5px;
+}
