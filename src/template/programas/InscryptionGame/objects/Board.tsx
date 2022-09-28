@@ -1,4 +1,4 @@
-import { LegacyRef, MutableRefObject, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import {Card} from "../objects/Card"
 
 export function Board(){
