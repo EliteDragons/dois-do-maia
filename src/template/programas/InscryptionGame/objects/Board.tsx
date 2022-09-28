@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import {Card} from "../objects/Card.js"
+import {Card} from "./Card"
 
 export function Board(){
     
