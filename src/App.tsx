@@ -17,6 +17,7 @@ function App() {
         <Route path="/programas" element={<Programas/>}/>
         <Route path="/programas/turing" element={<Turing_template/>}/>
         <Route path="/programas/inscryption" element={<InscryptionGame/>}/>
+        <Route path="/contatos" element={<div>Se chegou aqui, então é gay</div>}/>
       </Routes>
 
     </BrowserRouter>
