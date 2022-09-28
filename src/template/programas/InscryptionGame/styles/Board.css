@@ -1,0 +1,7 @@
+.Board {
+    display: flex;
+}
+
+.Board > div {
+    flex:0.2
+}
