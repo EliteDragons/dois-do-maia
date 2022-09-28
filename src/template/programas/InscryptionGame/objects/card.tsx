@@ -5,7 +5,7 @@ type CardProps = {
     type?: string,
     price?:number,
     refA?:MutableRefObject<(HTMLDivElement | null)[]>,
-    onMouseDown?:Function | null
+    onMouseDown?:Function
 }
 
 
