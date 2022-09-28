@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import {Card} from "../objects/Card"
+import {Card} from "../objects/Card.tsx"
 
 export function Board(){
     
